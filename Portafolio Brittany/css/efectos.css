@@ -1,0 +1,49 @@
+body{
+    background-color:pink;
+}
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(230, 169, 216);
+}
+
+nav{background-color: rgb(76, 85, 211);
+}
+li{background-color: rgb(215, 0, 235);
+}
+/*Estilos para la barra de navegación */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #33077b;
+    color: #fff;
+    padding: 10px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Alinea los elementos a la derecha */
+}
+nav ul li {
+    display: inline;
+    argin-left: 20px; /* Ajusta el margen izquierdo para todos los elementos*/
+}
+nav ul li:last-child a {
+    margin-right: 40px; /* Aplica margen derecho solo al enlance del último*/
+}
+nav ul li.left{
+    float: left; /*Alinea  este elemento a la izquierda */
+    margin-left:0; /*Elimina el margen izquierdo para el primer elemento*/
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
