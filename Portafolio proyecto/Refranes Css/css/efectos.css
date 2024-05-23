@@ -1,0 +1,42 @@
+h1{
+    color:rgb(202, 224, 244);
+font-family: georgia; /*Fuente de texto*/
+background-color:rgba(83, 104, 223, 0.792);
+font-size: 100px; /*Tamaño de texto*/
+font-weight: 700; /*Anchura de texto*/
+}
+#p-1{    color: rgb(52, 111, 79)}
+#p-2{    color: rgb(83, 66, 136)}
+
+
+ /*Cambia a todo elemento de la página:
+ *{background-color: pink;}
+ */
+ h2{
+    border: 3pt solid rgb(111, 186, 178)
+ }
+ pre{
+    font-size: 20px;
+ }
+.pre-1{
+    background-color: rgb(28, 143, 181);
+}
+div p{
+    font-size: 500px;
+}
+
+
+div > p{
+    font-size: 50pt; }
+span + small{
+    background-color: rgb(159, 137, 241);
+}
+
+#p-3{
+    font-style: italic; /*Tuerce las letras*/      
+    color: rgb(84, 138, 114);
+    font-family: arial;
+    font-size: 10pc; 
+    font-weight: bold ;}        
+   
+
