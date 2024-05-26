@@ -1,0 +1,213 @@
+* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la barra de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #91d7e4;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Alinea los elementos a la derecha */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; /* Ajusta el margen izquierdo para todos los elementos, incluido el último */
+}
+
+nav ul li:last-child a {
+    margin-right: 40px; /* Aplica margen derecho solo al enlace del último elemento */
+}
+
+nav ul li.left {
+    float: left; /* Alinea este elemento a la izquierda */
+    margin-left: 0; /* Elimina el margen izquierdo para el primer elemento */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-top: 100px; /* Ajusta el padding superior para dejar espacio para la barra de navegación */
+}
+
+section {
+    border: 1px solid #412f7e;
+    padding: 20px;
+}
+
+/* Estilos específicos para las secciones */
+#about {
+    grid-column: span 2;
+    background-color: #7365af;
+    border: 1px solid #df83da;
+}
+
+/*colores de fondo para cada sección  RRR*/
+#contactos {
+    background-color: #d698e9c9;
+    border: 1px solid #96bae7;
+}
+#services {
+    background-color: #f2aaf5;
+    border: 1px solid #5691d4;
+}
+#projects {
+    background-color: #b9578d;
+    border: 1px solid #7b9bce;
+}
+#education {
+    background-color: #c781c7;
+    border: 1px solid #8173cf;
+}
+#skills {
+    background-color: #ad8ec7;
+    border: 1px solid #005fad;
+}
+#experience {
+    background-color: #df929f;
+    border: 1px solid #6b96c5;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.about-text {
+    grid-column: 1;
+    text-align: justify;
+}
+
+.about-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/*Para la sección de proyectos */
+#projects {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Divide la fila en tres columnas */
+}
+
+.project-info {
+    grid-column: span 2; /* Texto en la primera columna */
+    text-align: justify; /* Justifica el texto */
+    padding: 10px;
+}
+
+.project-info2 {
+    grid-column: span 2; /* Texto en la primera columna */
+    text-align: justify; /* Justifica el texto */
+    background-color: #f5f5f5;
+    padding: 5px;
+    margin-bottom:5px;
+    border-radius: 10px;
+}
+
+
+/* Estilos para las imágenes */
+.project-image {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.certification {
+    background-color: #f5f5f5;
+    padding: 5px;
+    margin-bottom:5px;
+    border-radius: 10px;
+}
+
+.certification h3 {
+    margin-top: 0;
+}
+
+.certification p,
+.certification pre {
+    margin: 5px 0;
+    font-family: sans-serif;
+}
+
+.cert-img {
+    grid-column: 1; /* Imagen en la columna */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.cert-img2 {
+    grid-column: 1; /* Imagen en la segunda columna */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.cert-img img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+    width: 200px; /* Restaura el ancho automático */
+    height: 150px; /* Mantiene la proporción de la imagen */
+}
+.cert-img2 img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+    width: 100px; /* Restaura el ancho automático */
+    height: 100px; /* Mantiene la proporción de la imagen */
+}
