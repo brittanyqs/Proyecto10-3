@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado - Inicio</title>
+    <link rel="stylesheet" href="..//CSS/styles.css">
+    <link rel="stylesheet" href="..//CSS/mode.css">
+    <link rel="stylesheet" href="../CSS/temp.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+      <a href="../HTML/index.html"> <img src="..//Media/img/logo.jpg" alt="logo" id="logoI"> </a>
+     
+      <button class="hamburger" id="hamburger-btn">&#9776;</button>
+      <nav id="navbar">    
+  <a href="..//HTML/index.html">Inicio</a>
+  <a href="../HTML/login.html" id="login-link">Iniciar Sesión </a>
+  <a href="../HTML/register.html" id="register-link">Registrase </a>
+  <a href="..//HTML/about.html" id="acercade-link">AcercaDe</a>
+  <a href="..//HTML/contact.html" id="contactos-link">Contactos</a>
+  <a href="..//HTML/location.html" id="ubicacion-link">Ubicación</a>
+  <a href="..//HTML/historial.HTML" id="historial-link" style="display:none;">Ver compras</a>
+  <a href="..//HTML/admin.html" id="productos-link" style="display: none;">Productos</a>
+  <span id="welcome-message" style="display:none;"></span>
+  <a href="#" id="logout-link" style="display:none;">Cerrar Sesión</a>
+  <button id="cart-btn">Carrito (0)</button>
+      </nav>
+      </header>
+
+     <!--mode-->
+     <div id="mode-selector-theme">
+        <label for="mode-selector">Selecciona un modo:</label>
+      <select id="mode-selector">
+      <option value="light">Modo predeterminado</option>
+      <option value="dark">Modo Oscuro</option>
+      <option value="colorblind">Modo Accesible</option>
+      </select>
+      <button id="toggle-mode-btn">Aplicar Modo</button>
+      </div>
+
+      <!--Temporizador-->
+      <div class="temporizador">
+        <h1>Nuevas promociones disponibles en:</h1>
+        <div id="countdown" style="font-size: 24px;"></div>
+    
+    <script class="script">
+    var countDownDate = new Date().getTime() + (1 * 1 * 60 * 1000); // 24 horas desde ahora
+    
+    var countdownFunction = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+    
+    if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown").innerHTML = "¡Oferta finalizada!";
+    }
+    }, 1000);
+    </script>
+    </div>
+ 
+    <!-- Sección Principal -->
+    <main>
+        <!-- Lista de Productos -->
+        <section id="product-list" class="product-grid">
+            <!-- Ejemplo de tarjeta de producto -->
+            <div class="product">
+                <h3>Nombre del Producto 1</h3>
+                <p>Precio: ₡<span class="product-price">1000</span></p>
+                <button class="add-to-cart" data-name="Nombre del Producto 1" data-price="1000">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h3>Nombre del Producto 2</h3>
+                <p>Precio: ₡<span class="product-price">1500</span></p>
+                <button class="add-to-cart" data-name="Nombre del Producto 2" data-price="1500">Añadir al carrito</button>
+            </div>
+            <!-- Agrega más productos según sea necesario -->
+        </section>
+
+        <!-- Carrito de Compras -->
+        <div id="cart" style="display: none;">
+            <h2>Carrito de compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Subtotal: ₡<span id="cart-subtotal">0.00</span></p>
+            <p>IVA (13%): ₡<span id="cart-tax">0.00"></span></p>
+            <p>Total: ₡<span id="cart-total">0.00"></span></p>
+            <button id="checkout-btn">Finalizar Compras</button>
+        </div>
+        
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <span>@Supermercado 2024 - Todos los derechos reservados</span>
+        <div class="footerdiv">
+            <div class="footerdiv1">
+                <img src="../Media/img/logo.jpg" style="border-radius: 5px; width: 200px; height: 150px;" alt="Logo">
+            </div>
+            <div class="footerdiv2">
+                <h3 class="headline footer">Servicio al cliente</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Métodos de pago</a></li>
+                    <li><a href="#">Entregas y devoluciones</a></li>
+                    <li><a href="#">Políticas de cookies</a></li>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footerdiv2">
+                <h2 class="headline">Contáctenos</h2>
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:3437-8978">3437-8978</a></li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:super@super.com">super@super.com</a></li>
+                    <li><a href="../HTML/contactos.html"><i class="fa fa-comment" aria-hidden="true"></i>Contáctenos</a></li>
+                    <li><a href="../HTML/preguntas.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Preguntas frecuentes</a></li>
+                    <li><a href="../HTML/ubicacion.html"><i class="fa fa-store" aria-hidden="true"></i>Supermercados</a></li>
+                    <li><a href="../HTML/acercade.html"><i class="fa fa-building" aria-hidden="true"></i>¿Quiénes somos?</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../JS/carrito.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/mode.js"></script>
+</body>
+
+</html>
+
+

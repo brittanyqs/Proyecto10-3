@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="..//CSS/styles.css"><link rel="stylesheet" href="..//CSS/mode.css">
+    <link rel="stylesheet" href="..//CSS/acercade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="../HTML/index.html"> <img src="..//Media/img/logo.jpg" alt="logo" id="logoI"> </a>
+        <button class="hamburger" id="hamburger-btn">&#9776;</button>
+        <nav id="navbar">         
+            <a href="..//HTML/index.html">Inicio</a>
+            <a href="../HTML/login.html" id="login-link">Iniciar Sesión </a>
+            <a href="../HTML/register.html" id="register-link">Registrase </a>
+            <a href="..//HTML/contact.html" id="contactos-link">Contactos</a>
+            <a href="..//HTML/location.html" id="ubicacion-link">Ubicación</a>
+            <a href="..//HTML/historial.HTML" id="historial-link" style="display:none;">Ver compras</a>
+            <a href="..//HTML/admin.html" id="productos-link" style="display: none;">Productos</a>
+            <span id="welcome-message" style="display:none;"></span>
+            <a href="#" id="logout-link" style="display:none;">Cerrar Sesión</a>
+            <button id="cart-btn">Carrito (0)</button>
+        </nav>
+        </header>
+        
+     <!--mode-->
+     <div id="mode-selector-theme">
+        <label for="mode-selector">Selecciona un modo:</label>
+      <select id="mode-selector">
+      <option value="light">Modo predeterminado</option>
+      <option value="dark">Modo Oscuro</option>
+      <option value="colorblind">Modo Accesible</option>
+      </select>
+      <button id="toggle-mode-btn">Aplicar Modo</button>
+      </div>
+        <main>
+            <div class="about-container">
+                <h1>Acerca de nosotros</h1>
+                <div class="about-text">
+                    <h2>Semilla Market</h2>
+                    <p>En Semilla, creemos que la alimentación es la base de una vida saludable y sostenible.
+                    Nuestro compromiso es ofrecer productos 100% orgánicos, cultivados con respeto hacia la naturaleza
+                    y las comunidades que los producen. </p> 
+                    <p>Cada uno de nuestros productos es cuidadosamente seleccionado, priorizando la calidad y el sabor,
+                    para que puedas disfrutar de alimentos frescos y nutritivos. Nos apasiona apoyar a los agricultores locales
+                    y promover prácticas que cuiden el medio ambiente. </p>
+                    <p>En Semilla, cada compra es un paso hacia un estilo de vida más consciente. Te invitamos a explorar nuestra selección 
+                    y unirte a nuestra misión de fomentar un mundo más saludable, un bocado a la vez.</p>
+                </div>
+            <div class="about-image">
+                    <img src="../Media/img/super4.jpeg" alt="imagen del supermercado">
+            </div>
+        </div>
+        
+    </main>
+  
+   <!-- Pie de Página -->
+   <footer>
+    <span>@Supermercado 2024 - Todos los derechos reservados</span>
+    <div class="footerdiv">
+        <div class="footerdiv1">
+            <img src="../Media/img/logo.jpg" style="border-radius: 5px; width: 200px; height: 150px;" alt="Logo">
+        </div>
+        <div class="footerdiv2">
+            <h3 class="headline footer">Servicio al cliente</h3>
+            <ul class="footer-links">
+                <li><a href="#">Métodos de pago</a></li>
+                <li><a href="#">Entregas y devoluciones</a></li>
+                <li><a href="#">Políticas de cookies</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+        </div>
+        <div class="footerdiv2">
+            <h2 class="headline">Contáctenos</h2>
+            <ul>
+                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:3437-8978">3437-8978</a></li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:super@super.com">super@super.com</a></li>
+                <li><a href="../HTML/contactos.html"><i class="fa fa-comment" aria-hidden="true"></i>Contáctenos</a></li>
+                <li><a href="../HTML/preguntas.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Preguntas frecuentes</a></li>
+                <li><a href="../HTML/ubicacion.html"><i class="fa fa-store" aria-hidden="true"></i>Supermercados</a></li>
+                <li><a href="../HTML/acercade.html"><i class="fa fa-building" aria-hidden="true"></i>¿Quiénes somos?</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    
+    <script src="..//JS/script.js"></script>
+    <script src="..//JS/mode.js"></script>
+</body>
+</html>
+
